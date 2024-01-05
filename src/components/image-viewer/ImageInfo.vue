@@ -17,6 +17,13 @@
         </label>
       </p>
 
+      <p v-if="document.creator.name">
+        <fa-icon icon="user" />
+        <label>
+          {{ document.creator.name }}
+        </label>
+      </p>
+
       <markdown v-if="document.cooked.summary" class="is-italic" :content="document.cooked.summary" />
       <markdown v-if="document.cooked.description" :content="document.cooked.description" />
 
